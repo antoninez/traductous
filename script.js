@@ -1,8 +1,10 @@
-function replaceLastSyllable() {
-	const input = document.getElementById('wordInput').value;
-	const output = document.getElementById('output');
+function replaceLastSyllable()
+{
+	const input  = document.getElementById('input').value;
+	const output = document.getElementById('output')     ;
 
-	if (input.trim() === "") {
+	if (input.trim() === "")
+	{
 		output.value = "";
 		return;
 	}
@@ -11,7 +13,8 @@ function replaceLastSyllable() {
 	const words = input.split(/\s+/);
 
 	// Appliquer la traduction sur chaque mot
-	const translatedWords = words.map(word => {
+	const translatedWords = words.map(word =>
+	{
 		return word.replace(/[aeiouyAEIOUY]+[^aeiouyAEIOUY]*$/, "ous");
 	});
 
