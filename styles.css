@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f7f7f7;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 80%;
+	max-width: 1200px;
+	display: flex;
+	justify-content: center;
+}
+
+.textarea-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+textarea {
+	width: 48%;
+	height: 300px;
+	padding: 20px;
+	font-size: 18px;
+	border: 2px solid #333;
+	border-radius: 8px;
+	background-color: #fff;
+	color: #000;
+	resize: none;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+	border-color: #666;
+}
+
+textarea[readonly] {
+	background-color: #f0f0f0;
+}
