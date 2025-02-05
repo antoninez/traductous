@@ -61,3 +61,15 @@ document.getElementById('copyOutput').addEventListener('click', () => {
 		console.error('Erreur lors de la copie : ', err);
 	});
 });
+
+let secretCode = '';
+const correctCode = '3d';
+
+document.addEventListener('keydown', (event) => {
+    secretCode += event.key.toLowerCase();
+    secretCode = secretCode.slice(-2); // Garde seulement les 8 dernières touches
+
+    if (secretCode === correctCode) {
+        document.body.classList.toggle('rotate3D');
+    }
+});
